@@ -14,7 +14,7 @@ export class ProductRepository {
  }
  getProducts(category: string = null): Product[] {
  return this.products
- .filter(p => category == null || category == p.category);
+ .filter(p => category == null || category == p.category).sort((a, b) => (a.quantity < b.quantity) ? 1 : -1);
  }
  getProduct(id: number): Product {
  return this.products.find(p => p.id == id);
