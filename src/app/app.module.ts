@@ -6,21 +6,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CartSummaryComponent } from './components/cart-summary/cart-summary.component';
-import { from } from 'rxjs';
 import { AdminComponent } from './components/admin/admin.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     CartSummaryComponent,
-    AdminComponent
+    AdminComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
-      {path: "admin",component:AdminComponent}
+      {path: "admin",component:AdminComponent},
+      {path: "/",component:HomeComponent},
+      {path: "**",redirectTo: "/"}
     ])
   ],
   providers: [],
