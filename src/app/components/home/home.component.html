@@ -1,3 +1,33 @@
-<p>
-  home works!
-</p>
+<div>
+  <!-- <app-navbar></app-navbar> -->
+  <div class="row text-white">
+    <div class="col-3 bg-info">
+        {{categories.length}} Categories
+    </div>
+    <div class="col-9 bg-success">
+        {{products.length}} Products
+    </div>
+    <table>
+      <tr>
+        <th><p>Product Name</p></th>
+        <th><p>Product ID</p></th>
+        <th><p>Category</p></th>
+        <th><p>Quantity</p></th>
+        <th><p>Inventory</p></th>
+        <th><p>Product Type</p></th>
+        <th><p>Stock Date</p></th>
+        <th><p>Product Company</p></th>
+      </tr>
+      <tr *ngFor="let product of products">
+        <td><p>{{ product.name }}</p></td>
+        <td><p>{{ product.id }}</p></td>
+        <td><p>{{ product.category }}</p></td>
+        <td><p>{{ product.quality }}</p></td>
+        <td><p>{{ product.inventory }}</p></td>
+        <td><p>{{ product.type }}</p></td>
+        <td><p>{{ product.date }}</p></td>
+        <td><p>{{ product.company }}</p></td>
+      </tr>
+    </table>
+  </div>
+</div>

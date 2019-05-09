@@ -8,22 +8,23 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CartSummaryComponent } from './components/cart-summary/cart-summary.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { HomeComponent } from './components/home/home.component';
+import { HomeModule } from './components/home/home.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     CartSummaryComponent,
-    AdminComponent,
-    HomeComponent
+    AdminComponent
   ],
   imports: [
     BrowserModule,
+    HomeModule,
     AppRoutingModule,
     RouterModule.forRoot([
       {path: "admin",component:AdminComponent},
-      {path: "/",component:HomeComponent},
-      {path: "**",redirectTo: "/"}
+      {path: "",component:HomeComponent},
+      {path: "**",redirectTo: ""}
     ])
   ],
   providers: [],
