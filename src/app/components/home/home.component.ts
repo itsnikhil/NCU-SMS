@@ -11,6 +11,9 @@ export class HomeComponent {
   public productsPerPage = 4;
   public selectedPage = 1;
   constructor(private repository: ProductRepository) { }
+  ngAfterViewInit() {
+    this.onResize(document.querySelector('.catGroup'));
+  }
   get products(): Product[] {
     let pageIndex = (this.selectedPage - 1) * this.productsPerPage
     return this.repository.getProducts(this.selectedCategory)
@@ -33,6 +36,13 @@ export class HomeComponent {
   get pageCount(): number {
     return Math.ceil(this.repository
       .getProducts(this.selectedCategory).length / this.productsPerPage)
+  }
+  onResize(event: any){
+    if(window.innerWidth < 500){
+      document.querySelector('.catGroup').classList.add('flex-wrap');
+    }else{
+      document.querySelector('.catGroup').classList.remove('flex-wrap');
+    }
   }
   // get pageNumbers(): number[] {
   //   return Array(Math.ceil(this.repository
