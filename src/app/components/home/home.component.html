@@ -1,23 +1,25 @@
 <div class="container-fluid">
   <div class="row">
-  </div>
-  <div class="row">
-    <div class="col-3 p-2">
-      <button class="btn btn-block btn-outline-primary" (click)="changeCategory()">
+    <div class="col-lg-12 p-2">
+      <div class="container mx-auto">
+        <div class="btn-group d-flex" role="group" aria-label="Basic example">
+      <button class="btn btn-block btn-outline-primary mt-1" (click)="changeCategory()" [class.active]="selectedCategory == null || selectedCategory == 'undefined'">
         Home
       </button>
-      <button *ngFor="let cat of categories" class="btn btn-outline-primary btn-block"
+      <button *ngFor="let cat of categories" class="btn btn-outline-primary btn-block mt-1"
         [class.active]="cat == selectedCategory" (click)="changeCategory(cat)">
         {{cat}}
       </button>
+      </div>
+      </div>
     </div>
-    <div class="col-9 p-2">
+    <div class="col-lg-10 mx-auto p-2">
       <div *ngFor="let product of products" class="card m-1 p-1 bg-light">
         <h4>
           {{product.name}}
-          <span class="badge badge-pill badge-primary float-right">
-            {{ product.date | date }}
-          </span>
+          <!-- <span class="badge badge-pill badge-primary float-right mt-1">
+            {{ product.date | date }} -->
+          <!-- </span> --> 
         </h4>
         <div class="card-text bg-white p-1">Quantity: {{product.quantity}}</div>
       </div>
