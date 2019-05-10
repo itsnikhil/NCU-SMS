@@ -7,5 +7,8 @@ export class Product {
         public quantity:number,
         public inventory?:number,
         public type?:string,
-        public company?:string){}
+        public company?:string,
+        public desc?:string,
+        public img?:string,
+        public veg?:string){}
     }
