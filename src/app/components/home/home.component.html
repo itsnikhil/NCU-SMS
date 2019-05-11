@@ -5,7 +5,7 @@
         <div class="btn-group d-flex catGroup" role="group">
           <button class="btn btn-block catBtn mt-1" (window:resize)="onResize($event)" (click)="changeCategory()"
             [class.active]="selectedCategory == null || selectedCategory == 'undefined'">
-            Home
+            All
           </button>
           <button *ngFor="let cat of categories" class="btn btn-block mt-1 catBtn"
             [class.active]="cat == selectedCategory" (click)="changeCategory(cat)">
@@ -39,7 +39,7 @@
                         <h5 class="pt-3">
                           Remaining Inventory
                         </h5>
-                        <span style="font-size: 2.5rem">{{ product.quantity }}</span>
+                        <span style="font-size: 2.5rem" class="badge badge-pill badge-light">{{ product.quantity }}</span>
                       </div>
                 </div>
                 <button class="btn btn-warning" data-toggle="collapse" [attr.data-target]="'#' + product.name.split(' ')[0]">View Details</button>
@@ -64,11 +64,11 @@
                 Quantity
               </h3>
               <div style="text-align: center;" class="my-5">
-                <button type="button" class="btn btn-light mx-3 add{{ product.id }}"
-                  style="border-radius: 50%;text-align: center;" (click)="subClick(product.id)">-</button>
+                <button type="button" class="btn mx-3 add{{ product.id }}"
+                  style="text-align: center;" (click)="subClick(product.id)"><span class="badge badge-pill p-3 badge-light">&nbsp;-</span></button>
                 <h2 #qty style="text-align: center;display:inline;" class="qty{{ product.id }}"><b>{{ product.inventory }}</b></h2>
-                <button type="button" class="btn btn-light mx-3 sub{{ product.id }}"
-                  style="border-radius: 50%;text-align: center;display:inline;" (click)="addClick(product.id)">+</button>
+                <button type="button" class="btn mx-3 sub{{ product.id }}"
+                  style="text-align: center;display:inline;" (click)="addClick(product.id)"><span class="badge badge-pill p-3 badge-light">+</span></button>
               </div>
               <div class="row">
                 <div class="col-4"></div>
