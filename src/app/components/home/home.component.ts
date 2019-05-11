@@ -44,6 +44,43 @@ export class HomeComponent {
       document.querySelector('.catGroup').classList.remove('flex-wrap');
     }
   }
+  subClick(val: number){
+    let qtyElement: any = <HTMLElement> document.querySelector('.qty'+val);
+    if(qtyElement.innerText <= 0){
+      let qtyBlock: any = <HTMLElement> document.querySelector('.block'+val);
+      qtyBlock.style.backgroundColor = 'lightgoldenrodyellow';
+      let qtySub: any = <HTMLElement> document.querySelector('.sub'+val);
+      qtySub.classList.add('diabled');
+    }
+    else{
+      let qtyBlock: any = <HTMLElement> document.querySelector('.block'+val);
+      qtyBlock.style.backgroundColor = 'white';
+      let qtySub: any = <HTMLElement> document.querySelector('.sub'+val);
+      qtySub.classList.remove('diabled');
+      let qtyAdd: any = <HTMLElement> document.querySelector('.add'+val);
+      qtyAdd.classList.remove('diabled');
+      qtyElement.innerText -= 1;
+    }
+  }
+  addClick(val: number){
+    console.log(this.repository.getProduct(val));
+    let qtyElement: any = <HTMLElement> document.querySelector('.qty'+val);
+    if(qtyElement.innerText >= this.repository.getProduct(val).quantity) {
+      let qtyBlock: any = <HTMLElement> document.querySelector('.block'+val);
+      qtyBlock.style.backgroundColor = 'lightgoldenrodyellow';
+      let qtyAdd: any = <HTMLElement> document.querySelector('.add'+val);
+      qtyAdd.classList.add('diabled');
+    }
+    else{
+      let qtyBlock: any = <HTMLElement> document.querySelector('.block'+val);
+      qtyBlock.style.backgroundColor = 'white';
+      let qtySub: any = <HTMLElement> document.querySelector('.sub'+val);
+      qtySub.classList.remove('diabled');
+      let qtyAdd: any = <HTMLElement> document.querySelector('.add'+val);
+      qtyAdd.classList.remove('diabled');
+      qtyElement.innerText -= (-1);
+    }
+  }
   // get pageNumbers(): number[] {
   //   return Array(Math.ceil(this.repository
   //     .getProducts(this.selectedCategory).length / this.productsPerPage))
