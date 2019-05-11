@@ -2,20 +2,20 @@
   <a class="navbar-brand" href="#" class="p-0 m-0">
     <img src="http://www.ncuindia.edu/wp-content/themes/ncuindia/assets/images/logo.png" width="150" height="60" alt="NCU Logo">
   </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav mr-auto">
-      <a class="nav-item nav-link home" routerLink="">Stock Management System<span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link admin" routerLink="/admin">Admin</a>
+    <div class="navbar-nav mr-auto p-3">
+      <a class="nav-item nav-link home" (click)="path='/'" [class.active]="path == '/'" routerLink="">Stock Management System<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link admin" (click)="path='/admin'" [class.active]="path == '/admin'" routerLink="/admin">Admin</a>
       <!-- <a class="nav-item nav-link" href="#">Soft Drinks</a>
       <a class="nav-item nav-link" href="#">Packed Snacks</a>
       <a class="nav-item nav-link" href="#">Biscuits</a>
       <a class="nav-item nav-link" href="#">Bakery</a> -->
     </div>
-    <button class="btn btn-light btncart m-3">
+    <!-- <button class="btn btn-light btncart m-3">
       <app-cart-summary></app-cart-summary>
-    </button>
+    </button> -->
   </div>
 </nav>

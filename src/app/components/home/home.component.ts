@@ -63,7 +63,6 @@ export class HomeComponent {
     }
   }
   addClick(val: number){
-    console.log(this.repository.getProduct(val));
     let qtyElement: any = <HTMLElement> document.querySelector('.qty'+val);
     if(qtyElement.innerText >= this.repository.getProduct(val).quantity) {
       let qtyBlock: any = <HTMLElement> document.querySelector('.block'+val);
