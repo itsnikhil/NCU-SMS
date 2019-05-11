@@ -9,6 +9,7 @@ import { CartSummaryComponent } from './components/cart-summary/cart-summary.com
 import { AdminComponent } from './components/admin/admin.component';
 import { HomeComponent } from './components/home/home.component';
 import { HomeModule } from './components/home/home.module';
+import { HomeFirstGuard } from './home-first.guard';
 
 @NgModule({
   declarations: [
@@ -22,12 +23,12 @@ import { HomeModule } from './components/home/home.module';
     HomeModule,
     AppRoutingModule,
     RouterModule.forRoot([
-      {path: "admin",component:AdminComponent},
-      {path: "",component:HomeComponent},
+      {path: "admin",component:AdminComponent, canActivate: [HomeFirstGuard]},
+      {path: "",component:HomeComponent, canActivate: [HomeFirstGuard]},
       {path: "**",redirectTo: ""}
     ])
   ],
-  providers: [],
+  providers: [HomeFirstGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
