@@ -9,22 +9,26 @@ import { CartSummaryComponent } from './components/cart-summary/cart-summary.com
 import { AdminComponent } from './components/admin/admin.component';
 import { HomeComponent } from './components/home/home.component';
 import { HomeModule } from './components/home/home.module';
+import { AdminModule } from './components/admin/admin.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     CartSummaryComponent,
-    AdminComponent
+  
   ],
   imports: [
     BrowserModule,
     HomeModule,
     AppRoutingModule,
     RouterModule.forRoot([
-      {path: "admin",component:AdminComponent},
+      {path: "admin",
+      loadChildren: "./components/admin/admin.module#AdminModule",
+      },
       {path: "",component:HomeComponent},
       {path: "**",redirectTo: ""}
+      
     ])
   ],
   providers: [],

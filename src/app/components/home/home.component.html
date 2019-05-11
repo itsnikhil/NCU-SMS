@@ -24,19 +24,32 @@
               </div>
             </div>
             <div class="col-lg-10 p-3">
-              <div>
-                <div class="float-right m-1" style="border: 1px solid green;">
-                  <div style="border-radius: 50%; background-color: green; width: 8px; height: 8px;margin: 3px;">
-                  </div>
+              <div class="row">
+                <div class="col-6">
+                    <h4 class="pt-3">
+                        {{ product.name }}
+                      </h4>
                 </div>
-                <h4 class="pt-3">
-                  {{ product.name }}
-                </h4>
-                <button class="btn btn-warning mt-5" data-toggle="collapse" data-target="#details">View Details</button>
+                <div class="col-6">
+                    <div>
+                        <div class="float-right m-1" style="border: 1px solid green;">
+                          <div style="border-radius: 50%; background-color: green; width: 8px; height: 8px;margin: 3px;">
+                          </div>
+                        </div>
+                        <h5 class="pt-3">
+                          Remaining Inventory
+                        </h5>
+                        <span style="font-size: 2.5rem">{{ product.quantity }}</span>
+                      </div>
+                </div>
+                <button class="btn btn-warning" data-toggle="collapse" [attr.data-target]="'#' + product.name.split(' ')[0]">View Details</button>
+              </div>
+              <div>
+                
               </div>
             </div>
           </div>
-          <div class="row collapse" id="details">
+          <div class="row collapse" id="{{ product.name.split(' ')[0] }}">
             <div class="col-lg-6">
               <ul class="list-group list-group-flush mt-3 mx-3">
                 <li class="list-group-item">Description : <b>{{ product.desc }}</b></li>
@@ -46,21 +59,21 @@
                 <li class="list-group-item">Category : <b>{{ product.category }}</b></li>
               </ul>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 block{{ product.id }}" style="border-radius: 8px;margin-top:10px;">
               <h3 style="text-align: center" class="h3 m-2 pt-3">
                 Quantity
               </h3>
               <div style="text-align: center;" class="my-5">
-                <button type="button" class="btn btn-light mx-3" 
-                  style="border-radius: 50%;text-align: center;">-</button>
-                <h2 style="text-align: center;display:inline;"><b>{{ product.quantity }}</b></h2>
-                <button type="button" class="btn btn-light mx-3"
-                  style="border-radius: 50%;text-align: center;display:inline;">+</button>
+                <button type="button" class="btn btn-light mx-3 add{{ product.id }}"
+                  style="border-radius: 50%;text-align: center;" (click)="subClick(product.id)">-</button>
+                <h2 #qty style="text-align: center;display:inline;" class="qty{{ product.id }}"><b>{{ product.inventory }}</b></h2>
+                <button type="button" class="btn btn-light mx-3 sub{{ product.id }}"
+                  style="border-radius: 50%;text-align: center;display:inline;" (click)="addClick(product.id)">+</button>
               </div>
               <div class="row">
                 <div class="col-4"></div>
                 <div class="col-4" style="text-align: center;">
-                  <button type="button" class="btn btn-success mb-3">Save</button>
+                  <button type="button" class="btn btn-success btn-lg mb-3">Save</button>
                 </div>
                 <div class="col-4"></div>
               </div>
