@@ -1,7 +1,6 @@
 <div class="container-fluid">
   <div class="row">
   <div class="col bg-dark text-white">
-  <a class="navbar-brand"Stock Management System ></a>
   </div>
   </div>
   <div class="row mt-2">
@@ -11,6 +10,9 @@
   routerLinkActive="active">
   Products
   </button>
+  <button class="btn btn-outline-success btn-block" routerLink="/admin/main/products/create">
+    Create New Product
+   </button>
   <button class="btn btn-outline-danger btn-block" (click)="logout()">
     Logout
     </button>

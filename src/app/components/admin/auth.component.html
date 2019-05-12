@@ -1,14 +1,12 @@
-<div class="bg-info p-2 text-center text-white">
-    <h3> Admin</h3>
-   </div>
-   <div class="bg-danger mt-2 p-2 text-center text-white"
+<div class="bg-danger mt-2 p-2 text-center text-white"
     *ngIf="errorMessage != null">
     {{errorMessage}}
    </div>
+   <div class="container">
    <div class="p-2">
     <form novalidate #form="ngForm" (ngSubmit)="authenticate(form)">
     <div class="form-group">
-    <label>Name</label>
+    <label>Username</label>
     <input class="form-control" name="username"
     [(ngModel)]="username" required />
     </div>
@@ -18,8 +16,9 @@
     [(ngModel)]="password" required />
     </div>
     <div class="text-center">
-        <button class="btn btn-secondary m-1" routerLink="/">Go back</button>
+        <button class="btn btn-secondary m-1" routerLink="/">Home Page</button>
         <button class="btn btn-primary m-1" type="submit" ng-keyup="$event.keyCode == 13">Log In</button>
         </div>
         </form>
+       </div>
        </div>
