@@ -26,26 +26,24 @@
             <div class="col-lg-10 p-3">
               <div class="row">
                 <div class="col-6">
-                    <h4 class="pt-3">
-                        {{ product.name }}
-                      </h4>
+                  <h4 class="pt-3">
+                    {{ product.name }}
+                  </h4>
                 </div>
                 <div class="col-6">
-                    <div>
-                        <div class="float-right m-1" style="border: 1px solid green;">
-                          <div style="border-radius: 50%; background-color: green; width: 8px; height: 8px;margin: 3px;">
-                          </div>
-                        </div>
-                        <h5 class="pt-3">
-                          Remaining Inventory
-                        </h5>
-                        <span style="font-size: 2.5rem" class="badge badge-pill badge-light">{{ product.quantity }}</span>
+                  <div>
+                    <div class="float-right m-1" style="border: 1px solid green;">
+                      <div style="border-radius: 50%; background-color: green; width: 8px; height: 8px;margin: 3px;">
                       </div>
+                    </div>
+                    <h5 class="pt-3">
+                      Remaining Inventory
+                    </h5>
+                    <span style="font-size: 2.5rem" class="badge badge-pill badge-light">{{ product.quantity }}</span>
+                  </div>
                 </div>
-                <button class="btn btn-warning" data-toggle="collapse" [attr.data-target]="'#' + product.name.split(' ')[0]">View Details</button>
-              </div>
-              <div>
-                
+                <button class="btn btn-warning" data-toggle="collapse"
+                  [attr.data-target]="'#' + product.name.split(' ')[0]">View Details</button>
               </div>
             </div>
           </div>
@@ -64,16 +62,17 @@
                 Quantity
               </h3>
               <div style="text-align: center;" class="my-5">
-                <button type="button" class="btn mx-3 add{{ product.id }}"
-                  style="text-align: center;" (click)="subClick(product.id)"><span class="badge badge-pill p-3 badge-light">&nbsp;-</span></button>
-                <h2 #qty style="text-align: center;display:inline;" class="qty{{ product.id }}"><b>{{ product.inventory }}</b></h2>
-                <button type="button" class="btn mx-3 sub{{ product.id }}"
-                  style="text-align: center;display:inline;" (click)="addClick(product.id)"><span class="badge badge-pill p-3 badge-light">+</span></button>
+                <button type="button" class="btn mx-3 add{{ product.id }}" style="text-align: center;"
+                  (click)="subClick(product.id)"><span class="badge badge-pill p-3 badge-light">&nbsp;-</span></button>
+                <h2 #qty style="text-align: center;display:inline;" class="qty{{ product.id }}">
+                  <b>{{ product.inventory }}</b></h2>
+                <button type="button" class="btn mx-3 sub{{ product.id }}" style="text-align: center;display:inline;"
+                  (click)="addClick(product.id)"><span class="badge badge-pill p-3 badge-light">+</span></button>
               </div>
               <div class="row">
                 <div class="col-4"></div>
                 <div class="col-4" style="text-align: center;">
-                  <button type="button" class="btn btn-success btn-lg mb-3">Save</button>
+                  <button type="button" class="btn btn-success btn-lg mb-3" (click)="saveClick(product)">Save</button>
                 </div>
                 <div class="col-4"></div>
               </div>

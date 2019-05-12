@@ -80,6 +80,14 @@ export class HomeComponent {
       qtyElement.innerText -= (-1);
     }
   }
+  saveClick(product: Product){
+    let qtyElement: any = <HTMLElement> document.querySelector('.qty'+product.id);
+    if(qtyElement.innerText > 0 && qtyElement.innerText <= product.quantity){
+      product.inventory -= qtyElement.innerText;
+      qtyElement.innerText = 0;
+      this.repository.saveProduct(product);
+    }
+  }
   // get pageNumbers(): number[] {
   //   return Array(Math.ceil(this.repository
   //     .getProducts(this.selectedCategory).length / this.productsPerPage))
