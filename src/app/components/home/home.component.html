@@ -64,11 +64,19 @@
                 Quantity
               </h3>
               <div style="text-align: center;" class="my-5">
+<<<<<<< HEAD
                 <button type="button" class="btn mx-3 add{{ product.id }}"
                   style="text-align: center;" (click)="subClick(product.id)"><span class="badge badge-pill p-3 badge-light">&nbsp;-</span></button>
                 <h2 #qty style="text-align: center;display:inline;" class="qty{{ product.id }}"><b>{{ product.inventory }}</b></h2>
                 <button type="button" class="btn mx-3 sub{{ product.id }}"
                   style="text-align: center;display:inline;" (click)="addClick(product.id)"><span class="badge badge-pill p-3 badge-light">+</span></button>
+=======
+                <button type="button" class="btn btn-light mx-3 add{{ product.id }}"
+                  style="border-radius: 50%;text-align: center;" (click)="subClick(product.id)">-</button>
+                <h2 #qty style="text-align: center;display:inline;" class="qty{{ product.id }}"><b>{{ product.inventory }}</b></h2>
+                <button type="button" class="btn btn-light mx-3 sub{{ product.id }}"
+                  style="border-radius: 50%;text-align: center;display:inline;" (click)="addClick(product.id)">+</button>
+>>>>>>> admin
               </div>
               <div class="row">
                 <div class="col-4"></div>
