@@ -1,8 +1,8 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
+import { Observable, of } from "rxjs";
 import { Product } from "./product.model";
-import { map } from "rxjs/operators";
+import { map, catchError } from "rxjs/operators";
 import { HttpHeaders } from '@angular/common/http';
 
 const PROTOCOL = "http";
@@ -31,7 +31,13 @@ export class RestDataSource {
     }
     updateProduct(product): Observable<Product> {
         return this.http.put<Product>(`${this.baseUrl}products/${product.id}`,
-            product, this.getOptions());
+            product, this.getOptions()).pipe(
+                catchError(this.handleError<Product[]>('', []))
+              );
+    }
+    handleError<T>(arg0: string, arg1: undefined[]): (err: any, caught: Observable<Product>) => never {
+        window.alert("Ask admin to login first!");
+        return;
     }
     deleteProduct(id: number): Observable<Product> {
         return this.http.delete<Product>(`${this.baseUrl}products/${id}`,

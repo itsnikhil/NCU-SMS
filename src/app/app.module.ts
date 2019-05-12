@@ -24,7 +24,7 @@ import { HomeFirstGuard } from './home-first.guard';
     AppRoutingModule,
     RouterModule.forRoot([
       {path: "admin",
-      loadChildren: "./components/admin/admin.module#AdminModule", canActivate: [HomeFirstGuard],
+      loadChildren: "./components/admin/admin.module#AdminModule",
       },
       {path: "",component:HomeComponent},
       {path: "**",redirectTo: ""}

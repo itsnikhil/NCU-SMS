@@ -83,9 +83,9 @@ export class HomeComponent {
   saveClick(product: Product) {
     let qtyElement: any = <HTMLElement>document.querySelector('.qty' + product.id);
     if (qtyElement.innerText > 0 && qtyElement.innerText <= product.quantity) {
+      product.quantity -= qtyElement.innerText;
       qtyElement.innerText = 0;
       this.repository.saveProduct(product);
-      product.quantity -= qtyElement.innerText;
     }
   }
   // get pageNumbers(): number[] {
