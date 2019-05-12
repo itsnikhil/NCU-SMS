@@ -1,0 +1,51 @@
+<div class="bg-primary p-2 text-white" [class.bg-warning]="editing" [class.text-dark]="editing">
+  <h5>{{editing ? "Edit" : "Creyate"}} Product</h5>
+</div>
+<form novalidate #form="ngForm" (ngSubmit)="save(form)">
+  <div class="form-group">
+    <label>Name</label>
+    <input class="form-control" required name="name" [(ngModel)]="product.name" />
+  </div>
+  <div class="form-group">
+    <label>Date</label>
+    <input class="form-control" required name="date" [(ngModel)]="product.date" />
+  </div>
+  <!-- <div class="input-group mb-3">
+        <label>Category</label>
+        <select class="custom-select" id="inputGroupSelect01" [(ngModel)]="product.category">
+          <option selected>Choose Category</option>
+          <option value="Food" >Food</option>
+          <option value="Soft Drink" >Soft Drink</option>
+          <option value="Packed Snack" >Packed Snack</option>
+          <option value="Biscuit" >Biscuit</option>
+          <option value="Bakery" >Bakery</option>
+        </select>
+      </div>
+ <div class="form-group">
+   <label>Category</label>
+   <input class="form-control" name="category" [(ngModel)]="product.category" />
+   </div> -->
+   <div class="form-group">
+      <label>Quantity</label>
+      <input class="form-control" required name="quantity" [(ngModel)]="product.quantity" />
+    </div>
+  <div class="form-group">
+    <label>Description</label>
+    <textarea class="form-control" name="description" [(ngModel)]="product.desc">
+   </textarea>
+  </div>
+  <div class="form-group">
+      <label>Type</label>
+      <input class="form-control" name="type" [(ngModel)]="product.type" />
+    </div>
+    <div class="form-group">
+        <label>Company</label>
+        <input class="form-control" name="company" [(ngModel)]="product.company" />
+      </div>
+  <button type="submit" class="btn btn-primary" [class.btn-warning]="editing">
+    {{editing ? "Save" : "Create"}}
+  </button>
+  <button type="reset" class="btn btn-secondary" routerLink="/admin/main/products">
+    Cancel
+  </button>
+</form>
