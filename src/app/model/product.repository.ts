@@ -23,6 +23,9 @@ export class ProductRepository {
     getCategories(): string[] {
         return this.categories;
     }
+    getToken(): string{
+        return this.dataSource.auth_token;
+    }
     saveProduct(product: Product) {
         if (product.id == null || product.id == 0) {
             this.dataSource.saveProduct(product)

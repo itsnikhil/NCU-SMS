@@ -32,8 +32,8 @@
                 </div>
                 <div class="col-6">
                   <div>
-                    <div class="float-right m-1" style="border: 1px solid green;">
-                      <div style="border-radius: 50%; background-color: green; width: 8px; height: 8px;margin: 3px;">
+                    <div class="float-right m-1" [style.border]="'1px solid '+ product.veg">
+                      <div style="border-radius: 50%; width: 8px; height: 8px;margin: 3px;" [style.background-color]="product.veg">
                       </div>
                     </div>
                     <h5 class="pt-3">
@@ -62,10 +62,10 @@
                 Quantity
               </h3>
               <div style="text-align: center;" class="my-5">
-                <button type="button" class="btn mx-3 add{{ product.id }}"
+                <button type="button" class="btn mx-3 sub{{ product.id }}"
                   style="text-align: center;" (click)="subClick(product.id)"><span class="badge badge-pill p-3 badge-light">&nbsp;-</span></button>
                 <h2 #qty style="text-align: center;display:inline;" class="qty{{ product.id }}"><b>{{ product.inventory }}</b></h2>
-                <button type="button" class="btn mx-3 sub{{ product.id }}"
+                <button type="button" class="btn mx-3 add{{ product.id }}"
                   style="text-align: center;display:inline;" (click)="addClick(product.id)"><span class="badge badge-pill p-3 badge-light">+</span></button>
               </div>
               <div class="row">

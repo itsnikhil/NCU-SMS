@@ -29,6 +29,6 @@ export class ProductEditorComponent {
     ngAfterViewInit(){
         let date: Date = new Date()
         let dateInput: any = <HTMLElement> document.querySelector('.date-validation');
-        dateInput.max = date.getFullYear()+'-'+(('00'+date.getMonth()).slice(-2))+'-'+date.getDate();
+        dateInput.max = date.getFullYear()+'-'+(('00'+String(Number(date.getMonth())-(-1))).slice(-2))+'-'+date.getDate();
     }
 }
