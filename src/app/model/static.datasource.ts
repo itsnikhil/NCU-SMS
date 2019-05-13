@@ -15,7 +15,7 @@ export class StaticDataSource {
         'Cooked',
         'An item of food consisting of two pieces of bread with a filling between them, eaten as a light meal.',
         '',
-        'Veg'
+        'green'
       ),
       new Product(
         2,
@@ -28,7 +28,7 @@ export class StaticDataSource {
         'Cooked',
         'Food made from flour, water, and sometimes egg, that is cooked and usually served with a sauce. It is made in various shapes that have different names.',
         '',
-        'Veg'
+        'green'
       ),
       new Product(
         3,
@@ -41,7 +41,7 @@ export class StaticDataSource {
         'Cooked',
         'Long, thin pieces of potato that are fried and eaten hot.',
         '',
-        'Veg'
+        'green'
       ),
       new Product(
         4,
@@ -54,7 +54,7 @@ export class StaticDataSource {
         'Cooked',
         'A flat round cake of minced potatoes mixed with other vegetables, fried or grilled and typically served in a bread roll garnished with various condiments.',
         '',
-        'Veg'
+        'green'
       ),
       new Product(
         5,
@@ -67,7 +67,7 @@ export class StaticDataSource {
         'Cooked',
         'A dish of Italian origin, consisting of a flat round base of dough baked with a topping of tomatoes and cheese, typically with added meat, fish, or vegetables.',
         '',
-        'Veg'
+        'green'
       ),
       new Product(
         6,
@@ -80,7 +80,7 @@ export class StaticDataSource {
         'Coca-Cola',
         'A carbonated non-alcoholic drink manufactured by the Coca-Cola Company.',
         '',
-        'Veg'
+        'green'
       ),
       new Product(
         7,
@@ -93,7 +93,7 @@ export class StaticDataSource {
         'Coca-Cola',
         'Sprite is a colorless, caffeine-free, lemon and lime-flavored soft drink created by The Coca-Cola Company.',
         '',
-        'Veg'
+        'green'
       ),
       new Product(
         8,
@@ -106,7 +106,7 @@ export class StaticDataSource {
         'PepsiCo',
         'Mountain Dew is a carbonated soft drink brand produced and owned by PepsiCo',
         '',
-        'Veg'
+        'green'
       ),
       new Product(
         9,
@@ -119,7 +119,7 @@ export class StaticDataSource {
         'Cooked',
         'A hot drink made by infusing the dried crushed leaves of the tea plant in boiling water.',
         '',
-        'Veg'
+        'green'
       ),
       new Product(
         10,
@@ -132,7 +132,7 @@ export class StaticDataSource {
         'Cooked',
         'A hot drink made from the roasted and ground seeds (coffee beans) of a tropical shrub.',
         '',
-        'Veg'
+        'green'
       ),
       new Product(
         11,
@@ -145,7 +145,7 @@ export class StaticDataSource {
         'Packed',
         'A long rectangular piece of deep-fried potato.',
         '',
-        'Veg'
+        'green'
       ),
       new Product(
         12,
@@ -158,7 +158,7 @@ export class StaticDataSource {
         'Doritos',
         'A dish of tortilla chips topped with melted cheese and often also with other savoury toppings.',
         '',
-        'Veg'
+        'green'
       ),
       new Product(
         13,
@@ -171,7 +171,7 @@ export class StaticDataSource {
         'Haldiram',
         'A small savoury snack or dish.',
         '',
-        'Veg'
+        'green'
       ),
       new Product(
         14,
@@ -184,7 +184,7 @@ export class StaticDataSource {
         'Frito-Lay',
         'Potato chips varieties produced by Frito-Lay.',
         '',
-        'Veg'
+        'green'
       ),
       new Product(
         15,
@@ -197,7 +197,7 @@ export class StaticDataSource {
         'Pringles',
         'Brand of potato and wheat-based stackable snack chips.',
         '',
-        'Veg'
+        'green'
       ),
       new Product(
         16,
@@ -210,7 +210,7 @@ export class StaticDataSource {
         'Baked',
         'Rolled biscuits are one of the most popular baking-powder leavened quick breads.',
         '',
-        'Veg'
+        'green'
       ),
       new Product(
         17,
@@ -223,7 +223,7 @@ export class StaticDataSource {
         'Baked',
         'Drop biscuits have more milk or other liquid added to the dough than rolled biscuits. The dough is moister and cannot be kneaded or rolled.',
         '',
-        'Veg'
+        'green'
       ),
       new Product(
         18,
@@ -236,7 +236,7 @@ export class StaticDataSource {
         'Baked',
         'Scones are sweet, rich wedge-shaped biscuits that are usually made with cream as well as butter. Scones have a tender, heavy crumb and a slightly crusty brown top. ',
         '',
-        'Veg'
+        'green'
       ),
       new Product(
         19,
@@ -249,7 +249,7 @@ export class StaticDataSource {
         'Baked',
         'Shortcakes use rich biscuits or scones as a base. They are either split or served whole, topped with sweetened fruit and whipped cream or ice cream.',
         '',
-        'Veg'
+        'green'
       ),
       new Product(
         20,
@@ -262,7 +262,7 @@ export class StaticDataSource {
         'Baked',
         'Viennese whirls are a sandwich biscuit made up of two shortbread biscuits held together with raspberry jam and buttercream.',
         '',
-        'Veg'
+        'green'
       ),
       new Product(
         21,
@@ -275,7 +275,7 @@ export class StaticDataSource {
         'Britannia',
         'A baked or cooked food that is small, flat and sweet. It usually contains flour, sugar and some type of oil or fat. It may include other ingredients such as raisins, oats, chocolate chips, nuts, etc.',
         '',
-        'Veg'
+        'green'
       ),
       new Product(
         22,
@@ -288,7 +288,7 @@ export class StaticDataSource {
         'Britannia',
         'An item of soft sweet food made from a mixture of flour, fat, eggs, sugar, and other ingredients, baked and sometimes iced or decorated.',
         '',
-        'Veg'
+        'green'
       ),
       new Product(
         23,
@@ -301,7 +301,7 @@ export class StaticDataSource {
         'Baked',
         'A food made from a mixture of flour, fat, and water, rolledflat and either wrapped around or put over or under other foods, and then baked.',
         '',
-        'Veg'
+        'green'
       ),
       new Product(
         24,
@@ -314,7 +314,7 @@ export class StaticDataSource {
         'Baked',
         'A cooked sweet dish served after the main course of a meal.',
         '',
-        'Veg'
+        'green'
       ),
       new Product(
         25,
@@ -327,7 +327,7 @@ export class StaticDataSource {
         'Baked',
         'A chocolate brownie is a square, baked, chocolate dessert. Brownies come in a variety of forms and may be either fudgy or cakey, depending on their density. They may include nuts, frosting, cream cheese, chocolate chips, or other ingredients',
         '',
-        'Veg'
+        'green'
       )
  ];
  getProducts(): Observable <Product[]> {

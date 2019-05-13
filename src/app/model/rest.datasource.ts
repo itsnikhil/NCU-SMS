@@ -31,13 +31,14 @@ export class RestDataSource {
     }
     updateProduct(product): Observable<Product> {
         return this.http.put<Product>(`${this.baseUrl}products/${product.id}`,
-            product, this.getOptions()).pipe(
-                catchError(this.handleError<Product[]>('', []))
-              );
-    }
-    handleError<T>(arg0: string, arg1: undefined[]): (err: any, caught: Observable<Product>) => never {
-        window.alert("Ask admin to login first!");
-        return;
+            product, this.getOptions())
+    //         .pipe(
+    //             catchError(this.handleError<Product[]>('', []))
+    //           );
+    // }
+    // handleError<T>(arg0: string, arg1: undefined[]): (err: any, caught: Observable<Product>) => never {
+    //     window.alert("Ask admin to login first!");
+    //     return;
     }
     deleteProduct(id: number): Observable<Product> {
         return this.http.delete<Product>(`${this.baseUrl}products/${id}`,
