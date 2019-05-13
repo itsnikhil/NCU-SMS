@@ -7,6 +7,7 @@ import { ProductRepository } from "../../model/product.repository";
   styleUrls: ["home.component.css"]
 })
 export class HomeComponent {
+  path =  window.location;
   public selectedCategory = null;
   public productsPerPage = 4;
   public selectedPage = 1;

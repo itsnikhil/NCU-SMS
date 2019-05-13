@@ -7,10 +7,11 @@
   <div class="col-lg-3">
   <button class="btn btn-outline-info btn-block"
   routerLink="/admin/main/products"
-  routerLinkActive="active">
+  [class.active]="selectedop == 'product'" (click)="setSelectedOp('product')">
   Products
   </button>
-  <button class="btn btn-outline-success btn-block" routerLink="/admin/main/products/create">
+  <button class="btn btn-outline-success btn-block" routerLink="/admin/main/products/create"
+  [class.active]="selectedop == 'create'" (click)="setSelectedOp('create')">
     Create New Product
    </button>
   <button class="btn btn-outline-danger btn-block" (click)="logout()">

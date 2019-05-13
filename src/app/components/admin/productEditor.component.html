@@ -1,6 +1,4 @@
-<div class="bg-primary p-2 text-white" [class.bg-warning]="editing" [class.text-dark]="editing">
-  <h5>{{editing ? "Edit" : "Create"}} Product</h5>
-</div>
+
 <form novalidate #productForm="ngForm" (ngSubmit)="productForm.form.valid && save(productForm)">
   <div class="form-group">
     <label>Name</label>
@@ -11,7 +9,7 @@
         Name is required.
       </div>
       <div *ngIf="name.errors.minlength">
-        Name must be at least 4 characters long.
+        Name must be atleast 4 characters long.
       </div>
     </div>
   </div>
@@ -99,9 +97,13 @@
         </div>
       </div>
   </div>
+  <div class="form-group">
+    <label>Choose Image</label>
+    <input class="form-control" name="image" type="file" [(ngModel)]="product.img">
+  </div>
   <button [class.disabled]="!productForm.valid" type="submit" class="btn btn-primary" [class.btn-warning]="editing">
     {{editing ? "Save" : "Create"}}
-  </button>
+  </button> &nbsp;&nbsp;&nbsp;&nbsp;
   <button type="reset" class="btn btn-secondary" routerLink="/admin/main/products">
     Cancel
   </button>
