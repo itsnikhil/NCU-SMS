@@ -9,12 +9,14 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { HomeModule } from './components/home/home.module';
 import { HomeFirstGuard } from './home-first.guard';
+import { FooterComponent } from './components/footer/footer.component';
 //import { AdminModule } from './components/admin/admin.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
+    FooterComponent,
     
   
   ],
