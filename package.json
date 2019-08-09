@@ -1,13 +1,13 @@
 {
   "name": "ncu-sms",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "postinstall": "ng build — aot — prod",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
+    "heroku-postbuild": "ng build --prod",
     "e2e": "ng e2e",
     "json": "json-server data.js -p 3500 -m authMiddleware.js"
   },
@@ -23,6 +23,7 @@
     "@angular/router": "~7.2.0",
     "bootstrap": "^4.1.1",
     "core-js": "^2.5.4",
+    "express": "^4.17.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.4.1",
     "rxjs": "~6.3.3",
