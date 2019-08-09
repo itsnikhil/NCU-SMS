@@ -4,6 +4,17 @@ const path = require('path');
 
 const app = express();
 
+const jsonServer = require('json-server');
+const server = jsonServer.create();
+const router = jsonServer.router('data.js');
+const middlewares = jsonServer.router('authMiddleware.js');
+const port = process.env.PORT || 3500;
+
+server.use(middlewares);
+server.use(router);
+
+server.listen(port);
+
 // Serve only the static files form the dist directory
 app.use(express.static('./dist/NCU-SMS'));
 
