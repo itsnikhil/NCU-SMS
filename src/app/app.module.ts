@@ -30,7 +30,6 @@ import { FooterComponent } from './components/footer/footer.component';
       },
       {path: "",component:HomeComponent},
       {path: "**",redirectTo: ""}
-      
     ])
   ],
   providers: [HomeFirstGuard],
