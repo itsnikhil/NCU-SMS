@@ -5,7 +5,7 @@ import { Product } from "./product.model";
 import { map, catchError } from "rxjs/operators";
 import { HttpHeaders } from '@angular/common/http';
 
-const PROTOCOL = "http";
+const PROTOCOL = "https";
 const PORT = 3500;
 const HOST = "ncu-sms-server.herokuapp.com"
 @Injectable()
